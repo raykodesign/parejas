@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Para Nosotros ✨</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Nunito:wght@300;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div id="loader">
+        <div class="heartbeat-loader">💖</div>
+        <p class="loading-text">Preparando nuestro mundo...</p>
+    </div>
+
+    <div class="bg-gradient"></div>
+    <div id="magic-cursor"></div> 
+
+    <div id="photo-modal" class="modal-overlay" onclick="closeModal()">
+        <div class="modal-content">
+            <img id="modal-img" src="" alt="Nuestro Momento">
+            <div class="modal-glow"></div>
+            <p class="modal-hint">Click para cerrar ✨</p>
+        </div>
+    </div>
+
+    <div class="main-wrapper">
+        <div class="glass-panel" id="tilt-card">
+            
+            <header>
+                <div class="cute-title">
+                    <h1>Nuestra Historia</h1>
+                </div>
+                <p class="subtitle">Cada día te quiero más...</p>
+            </header>
+
+            <section class="timer-container">
+                <div class="time-box">
+                    <span id="days">00</span>
+                    <span class="label">Días</span>
+                </div>
+                <div class="dots">:</div>
+                <div class="time-box">
+                    <span id="hours">00</span>
+                    <span class="label">Horas</span>
+                </div>
+                <div class="dots">:</div>
+                <div class="time-box">
+                    <span id="minutes">00</span>
+                    <span class="label">Mins</span>
+                </div>
+                <div class="dots">:</div>
+                <div class="time-box">
+                    <span id="seconds">00</span>
+                    <span class="label">Segs</span>
+                </div>
+            </section>
+
+            <section class="interactive-letter">
+                <div id="letter-cover">
+                    <i class="fas fa-heart icon-letter-cute"></i>
+                    <p>Una notita para ti</p>
+                    <button class="reveal-btn-cute" onclick="revealLetter()">
+                        Abrir con amor
+                    </button>
+                </div>
+                
+                <div id="letter-content" class="hidden-content">
+                    <h2 class="handwritten-cute">Mi persona favorita</h2>
+                    <p class="letter-text-cute">
+                        Desde el <strong>14 de Enero</strong>, todo es más bonito. 
+                        Gracias por las risas, por la paz y por ser tú. 
+                        Me haces muy feliz ❤️.
+                    </p>
+                    <button class="close-btn-cute" onclick="closeLetter()">
+                        <i class="fas fa-chevron-up"></i> Cerrar notita
+                    </button>
+                </div>
+            </section>
+
+             <section class="extra-interaction">
+                <p>¿Me extrañas? 👇</p>
+                <button class="kiss-btn" onclick="throwKisses()">
+                    <i class="fas fa-kiss-wink-heart"></i> Enviarte un beso
+                </button>
+            </section>
+
+            <section class="gallery-premium">
+                <div class="polaroid p1" onclick="openModal(this)">
+                    <img src="https://images.unsplash.com/photo-1523438097201-512ae7d59c44?w=500" alt="Foto1">
+                </div>
+                <div class="polaroid p2" onclick="openModal(this)">
+                    <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=500" alt="Foto2">
+                </div>
+                <div class="polaroid p3" onclick="openModal(this)">
+                    <img src="https://images.unsplash.com/photo-1621780030840-88069573bb3a?w=500" alt="Foto3">
+                </div>
+            </section>
+
+            <div class="music-widget-cute">
+                <div class="vinyl-record-cute" id="record">
+                    <i class="fas fa-music"></i>
+                </div>
+                <div class="player-controls-cute">
+                    <p>Play a nuestra canción</p>
+                </div>
+                 <button class="play-btn-small" id="play-pause-btn">
+                    <i class="fas fa-play" id="play-icon"></i>
+                </button>
+                <audio id="audio-player" loop>
+                    <source src="tu-cancion.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
